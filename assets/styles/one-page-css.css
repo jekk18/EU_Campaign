@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0; 
+    font-family: 'Noto Sans Georgian';
+} 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    font-family: 'Noto Sans Georgian';
+} 
+.handle-container-big{
+    max-width: 1840px;  
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 30px; 
+}
+.handle-container-small{
+    max-width: 1642px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 30px; 
+}
