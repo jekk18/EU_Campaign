@@ -2,7 +2,7 @@
 $('.reels-slider').slick({
     infinite: true, 
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     centerMode: true,
     centerPadding: '75px',
     dots: false,
@@ -27,6 +27,14 @@ $('.reels-slider').slick({
     //       }
     //     }
     //   ]
+  });
+
+  $('.articles-slider').slick({
+    infinite: true, 
+    slidesToShow: 5,
+    slidesToScroll: 1,  
+    dots: false,
+    arrows: false,  
   });
 
 $(document).ready(function () { 
