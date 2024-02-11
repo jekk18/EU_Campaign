@@ -1,3 +1,34 @@
+
+$('.reels-slider').slick({
+    infinite: true, 
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '75px',
+    dots: false,
+    arrows: false,
+    // responsive: [
+    //     {
+    //       breakpoint: 768,
+    //       settings: {
+    //         arrows: false,
+    //         centerMode: true,
+    //         centerPadding: '40px',
+    //         slidesToShow: 3
+    //       }
+    //     },
+    //     {
+    //       breakpoint: 480,
+    //       settings: {
+    //         arrows: false,
+    //         centerMode: true,
+    //         centerPadding: '40px',
+    //         slidesToShow: 1
+    //       }
+    //     }
+    //   ]
+  });
+
 $(document).ready(function () { 
     $(".scroll_data_id").on("click", function (event) { 
       let itemId = $(this).children("a").attr("data-id");
@@ -22,18 +53,20 @@ $(document).ready(function () {
   // Show the first tab and hide the rest 
  
 // Click function
-$('#tabs-nav li').mouseenter(function(){
-    $('#tabs-nav li').removeClass('active');
+$('.relative-container .item').mouseenter(function(){ 
+    $('.relative-container .item').removeClass('active');
     $(this).addClass('active');
     $('.tab-content').hide();
-    
-    var activeTabId = $(this).find('div').attr('data-tab-id');
-    $('#' + activeTabId).fadeIn(); // Show the content with a fade-in effect
+    $('.rec-link').fadeOut();
+
+    var activeTabId = $(this).data('tab-id');  
+    $('#' + activeTabId).fadeIn(); 
     return false;
 });
 
-$('#tabs-nav').mouseleave(function(){
+$('.relative-container').mouseleave(function(){
     $('.tab-content').hide();
+    $('.rec-link').show();
 });
 
  
@@ -72,4 +105,15 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function() {
+    $('.reels-item').each(function() {
+      var videoUrl = $(this).data('video-url'); // Get video URL from data attribute
+      var videoId = videoUrl.split('/').pop(); // Extract video ID
+      var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg';
+      $(this).find('img').attr('src', thumbnailUrl);
+    });
+  });
+
+
+  
  
