@@ -486,6 +486,7 @@ header{
     width: 130%;
 }
 .articles-item{ 
+    width: 375px!important;
     height: 356px!important;
     margin-right: 24px;
     border-radius: 32px;
@@ -494,6 +495,7 @@ header{
     background: #FFCC02;
     transition: 0.2s; 
 }
+ 
 .articles-item:hover{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
@@ -526,7 +528,7 @@ header{
     line-height: 1.5;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 8;
+    -webkit-line-clamp: 7;
     overflow: hidden;
     margin-top: 24px;
     margin-bottom: 28px;
@@ -535,4 +537,135 @@ header{
     height: 376px;
     overflow: hidden;
 }
+ 
+.video-section{
+    padding: 50px 0;
+}
+.video-container{
+    width: 100%;
+    padding-top: 56px;
+    position: relative;
+}
+.video-container::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 736px;
+    top: 0;
+    left: 0;
+    border-radius: 32px;
+    background-color: #3296E1;
+    z-index: -1;
+}
+.video-box{
+    width: 1080px;
+    margin: 0 auto;
+}
+.video-box h1{
+    font-size: 72px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+.video-box .text{
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+.iframe-video{
+    width: 1080px;
+    height: 605px;
+    position: relative;
+}
+.iframe-video iframe{
+    width: 100%;
+    height: 100%;
+}
+.play-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+/* Qoutes */
+.quotes-section{
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+}
+.quotes-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 56px;
+}
+.quotes-text{
+    width: 457px;
+}
+.quotes-text h1{
+    font-size: 72px;
+    color: #000;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 56px;
+}
+.quotes-text .text{
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.4;
+    width: 100%;
+    word-wrap: break-word;
+    width: 457px;
+}
+.quotes-slider{
+    width: 100%;
+    height: 472px; 
+    margin-left: 46px;  
+}
+.quotes-item{   
+    margin-right: 24px;
+    height: 472px!important;
+    border-radius: 32px;
+    overflow: hidden;
+    transition: 0.3s;
+    background: #3296E1;
+    padding: 40px;
+    padding-top: 56px;
+    text-decoration: none;
+}
+.quote-svg span svg path{
+    transition: 0.3s;
+}
+.quotes-item .text{
+    margin-top: 24px;
+    font-size: 22px;
+    color: #fff;
+    transition: 0.3s;
+    font-weight: 400;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 9;
+    overflow: hidden; 
+}
+.quotes-item:hover{
+    background: #FFCC02;
+}
+.quotes-item:hover .text{
+    color: #000;
+}
+.quotes-item:hover .quote-svg span svg path{
+    fill: #000;
+}
+/* Qoutes */
+
  

@@ -32,9 +32,48 @@ $('.reels-slider').slick({
   $('.articles-slider').slick({
     infinite: true, 
     slidesToShow: 5,
+    slidesToScroll: 2,   
+    variableWidth: true,
+    dots: false,
+    arrows: false, 
+      responsive: [
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,  
+            arrows: false,   
+          }
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            arrows: false, 
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false, 
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false, 
+            slidesToShow: 1
+          }
+        }
+      ]  
+  });
+  $('.quotes-slider').slick({
+    infinite: true, 
+    slidesToShow: 3,
     slidesToScroll: 1,  
     dots: false,
-    arrows: false,  
+    arrows: false,   
   });
 
 $(document).ready(function () { 
@@ -122,6 +161,6 @@ $(document).ready(function() {
     });
   });
 
-
+ 
   
  
