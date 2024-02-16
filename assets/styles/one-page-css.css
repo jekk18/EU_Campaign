@@ -719,7 +719,7 @@ header {
   outline: none;
 }
 .textarea-input {
-  width: 100%;
+  width: 100%!important;
 }
 .textarea-input textarea {
   width: 100%;
@@ -767,7 +767,7 @@ header {
 }
 .tab-c-item .text {
   font-size: 22px;
-  font-size: 400;
+  font-weight: 400;
   color: #000;
   margin-top: 25px;
   line-height: 1.4;
@@ -902,3 +902,74 @@ header {
     width: 56px;
     height: 56px;
   }
+  .one-page-footer{
+    width: 100%;
+    padding: 58px 0;
+    background: #3296E1;
+  }
+  .bottom-footer{
+    margin-top: 56px;
+    width: 100%;
+  }
+  .bottom-footer ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  .bottom-footer ul li{
+    list-style: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+  }
+  .footer-container{
+    width: 100%;
+  }
+  .top-footer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .footer-links-info{
+    width: calc((100% / 4) - 10px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow: hidden;
+  }
+  .footer-links-info h1{
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .footer-links-info ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer-links-info ul li{
+    list-style: none;
+  }
+  .footer-links-info ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.2;
+    word-break: break-all;
+    transition: 0.2s;
+  }
+  .footer-links-info ul li a:hover{
+    text-decoration: underline;
+  }
+  .footer-logo{
+    width: 233px;
+    height: 196px;
+  }
+   
