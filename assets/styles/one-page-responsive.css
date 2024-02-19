@@ -355,8 +355,67 @@
 .burger-icon .close-burger-icon{
   display: none;
 }
+.handle-relative-for-burger{
+  position: relative;
+}
 .burger-menu{
+  padding-top: 50px;
+  width: 100%;
+  background: #fff;
+  left: 0;
+  transform: translateY(100%);
   display: none;
+  align-items: center;  
+  flex-direction: column;
+  position: absolute;
+  bottom: 0px;
+  height: 100vh;
+  overflow-y: auto;
+}
+.active-burger-icon .open-burger-icon{
+  display: none;
+}
+.active-burger-icon .close-burger-icon{
+  display: flex;
+}
+.active-burger-menu{
+  display: flex;
+}
+.burger-list ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.burger-list ul li{
+  list-style: none;
+  text-align: center;
+}
+.burger-list ul li a{
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.burger-list ul li a:hover{
+  color: #3296e1;
+}
+.burger-lang{
+  margin-top: 20px; 
+  display: flex;
+  gap: 10px;
+}
+.burger-lang a{
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  transition: 0.2s;
+  text-decoration: none;
+}
+.burger-lang a.active{
+  font-weight: 700;
 }
 .lines-background-img{
   display: none;

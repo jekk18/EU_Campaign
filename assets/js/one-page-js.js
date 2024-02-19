@@ -222,6 +222,17 @@ $(document).ready(function() {
   });
  })
 
+
+ $(document).ready(function() { 
+  $('.nav-menu ul').clone().appendTo('.burger-list');
+});
+
+$(document).ready(function() {
+  $('.burger-icon').click(function() {
+    $(this).toggleClass('active-burger-icon');
+    $('.burger-menu').toggleClass('active-burger-menu'); 
+  });
+});
  
   
  
