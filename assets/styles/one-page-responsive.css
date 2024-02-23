@@ -398,6 +398,7 @@
   color: #000;
   cursor: pointer;
   transition: 0.2s;
+  font-family: "Noto Sans Georgian"; 
 }
 .burger-list ul li a:hover{
   color: #3296e1;
@@ -413,6 +414,7 @@
   color: #000;
   transition: 0.2s;
   text-decoration: none;
+  font-family: "Noto Sans Georgian"; 
 }
 .burger-lang a.active{
   font-weight: 700;
@@ -449,6 +451,7 @@
   min-height: 300px;
   height: auto;
   padding: 30px;
+  border-radius: 20px;
 }
 .relative-container{
   margin: 0 auto;
@@ -512,7 +515,7 @@
   width: 100%;
 }
 .yellowborder { 
-  top: -70px; 
+  top: -58px; 
 }
 .gallery-text-side{
   flex-direction: column;
