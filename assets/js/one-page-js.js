@@ -8,8 +8,17 @@ $('.reels-slider').slick({
     dots: false,
     arrows: false,
     responsive: [
+      {
+        breakpoint: 1800,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,  
+          centerMode: true,
+          centerPadding: '150px',
+        }
+      },
         {
-          breakpoint: 1600,
+          breakpoint: 1625,
           settings: { 
             arrows: false,
             centerMode: true,
@@ -18,12 +27,30 @@ $('.reels-slider').slick({
           }
         },
         {
-          breakpoint: 1280,
+          breakpoint: 1380,
           settings: {
             arrows: false,
             centerMode: true,
-            centerPadding: '50px',
+            centerPadding: '120px',
             slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 1250,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '70px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 1130,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '150px',
+            slidesToShow: 2
           }
         },
         {
@@ -31,7 +58,16 @@ $('.reels-slider').slick({
           settings: {
             arrows: false,
             centerMode: true,
-            centerPadding: '70px',
+            centerPadding: '100px',
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 870,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
             slidesToShow: 2
           }
         },
@@ -40,16 +76,51 @@ $('.reels-slider').slick({
           settings: {
             arrows: false,
             centerMode: true,
-            centerPadding: '20px',
-            slidesToShow: 2
+            centerPadding: '180px',
+            slidesToShow: 1
           }
         },
         {
-          breakpoint: 767,
+          breakpoint: 715,
           settings: {
             arrows: false,
             centerMode: true,
-            centerPadding: '30px',
+            centerPadding: '100px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 530,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 429,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '35px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 391,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '45px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 374,
+          settings: {
+            arrows: false,
+            centerMode: false, 
             slidesToShow: 1
           }
         }
@@ -233,6 +304,44 @@ $(document).ready(function() {
     $('.burger-menu').toggleClass('active-burger-menu'); 
   });
 });
+
+
+$(document).ready(function(){
+  var startXOffset;
+  
+  $(".reels-item").on("mousedown", function(event) {
+      startXOffset = event.pageX;
+  });
+  
+  $(".reels-item").on("mouseup", function(event) {
+    var endXOffset = event.pageX;
+    let iframe = $(this).find('.iframe-id');
+    let hideEvent = $(this).find('.hide-event');
+ 
+    let src = iframe.attr('src');
+
+    if (startXOffset === endXOffset) { 
+        if (src.includes('autoplay=0')) {
+            iframe.attr('src', src.replace('autoplay=0', 'autoplay=1'));
+            hideEvent.css('height', '80%');
+        } else { 
+            iframe.attr('src', src.replace('autoplay=1', 'autoplay=0'));
+            hideEvent.css('height', '100%');
+        }
+    } 
+});
+});
+
+// $(document).ready(function(){
+//   var iframe = $('#iframe-id');
+     
+//   iframe.attr('src', function(i, val) {
+//       return val.replace('autoplay=0', 'autoplay=1');
+//   });
+// });
+
+
+ 
  
   
  

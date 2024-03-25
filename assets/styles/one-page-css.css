@@ -460,19 +460,25 @@ header {
   font-weight: 700;
   font-family: "Noto Sans Georgian";
 }
-.reels-item {
-  height: 472px !important;
+.reels-item { 
   overflow: hidden;
-  padding: 0 12px;
+  /* padding: 0 12px; */
   transition: 0.2s;
+  position: relative;
+  height: 570px;  
 }
-.reels-item img {
+.reels-item iframe {  
+  border-radius: 30px;  
+}
+.hide-event{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 32px;
+  background: transparent;
+  z-index: 99;
 }
-
 .articles-section {
   padding: 50px 0;
   overflow-x: hidden;
